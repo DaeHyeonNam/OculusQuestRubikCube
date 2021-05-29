@@ -36,6 +36,7 @@ public class Automate : MonoBehaviour
 
     public void Shuffle()
     {
+        print(moveList.Count);
         List<string> moves = new List<string>();
         int shuffleLength = Random.Range(10, 30);
         for (int i = 0; i < shuffleLength; i++)
@@ -44,11 +45,13 @@ public class Automate : MonoBehaviour
             moves.Add(allMoves[randomMove]);
         }
         moveList = moves;
+        print(moveList.Count);
     }
 
 
     void DoMove(string move)
     {
+        print("DoMove");
         readCube.ReadState();
         CubeState.autoRotating = true;
         if (move == "U")

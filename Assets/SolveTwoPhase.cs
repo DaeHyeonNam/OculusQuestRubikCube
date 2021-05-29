@@ -27,7 +27,7 @@ public class SolveTwoPhase : MonoBehaviour
 
     public void Solver()
     {
-
+        print(Automate.moveList.Count);
         readCube.ReadState();
 
         // get the state of the cube as a string
@@ -47,7 +47,10 @@ public class SolveTwoPhase : MonoBehaviour
         List<string> solutionList = StringToList(solution);
 
         //Automate the list
+
+        //Daehyeon
         Automate.moveList = solutionList;
+        print(Automate.moveList.Count);
 
         print(info);
 

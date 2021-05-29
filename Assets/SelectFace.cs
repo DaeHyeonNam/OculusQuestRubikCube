@@ -19,6 +19,11 @@ public class SelectFace : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Daehyeon
+        if(Input.GetMouseButtonDown(0) == true)
+        {
+            print(CubeState.autoRotating);
+        }
         if (Input.GetMouseButtonDown(0) && !CubeState.autoRotating)
         {
             // read the current state of the cube            

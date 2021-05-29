@@ -97,6 +97,7 @@ public class PivotRotation : MonoBehaviour
 
     public void StartAutoRotate(List<GameObject> side, float angle)
     {
+        print("StartAutoRotate");
         cubeState.PickUp(side);
         Vector3 localForward = Vector3.zero - side[4].transform.parent.transform.localPosition;
         targetQuaternion = Quaternion.AngleAxis(angle, localForward) * transform.localRotation;
@@ -107,6 +108,7 @@ public class PivotRotation : MonoBehaviour
 
     public void RotateToRightAngle()
     {
+        print("RotateToRightAngle");
         Vector3 vec = transform.localEulerAngles;
         // round vec to nearest 90 degrees
         vec.x = Mathf.Round(vec.x / 90) * 90;
