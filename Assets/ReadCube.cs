@@ -58,7 +58,7 @@ public class ReadCube : MonoBehaviour
         cubeState.back = ReadFace(backRays, tBack);
 
         // update the map with the found positions
-        cubeMap.Set();
+        //cubeMap.Set();
 
     }
 
